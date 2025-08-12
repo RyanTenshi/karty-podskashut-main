@@ -4,19 +4,23 @@
   box-sizing: border-box;
 }
 :root{
-  --bg-color:#F3EFEC;
-  --text-color:#312A4E;
+  --bg-color:#312A4E;
+  --text-color:#F3EFEC;
   --accent-color:#FFAB6B;
   --main-font:Raleway;
   --accent-font:STIX Two Text;
 }
-
+.theme_dark {
+  --bg-color: #F3EFEC;
+  --text-color: #312A4E;
+  --accent-color: transparent;
+}
 .page {
   min-inline-size: 360px;
   margin: 0;
-  background-color: var(--bg-color);
+  background-color: var(--text-color);
   font-family: var(--main-font), sans-serif;
-  color: var(--text-color);
+  color: var(--bg-color);
 
 }
 
@@ -65,6 +69,7 @@ a{
 .content__list{
   list-style-type: none;
 }
+
 .content__list-item::before{
   content:url("/images/marker-light.svg");
   margin-inline-start: 40px;
@@ -75,6 +80,7 @@ a{
 .content__list-item:not(:last-child){
   margin-bottom: 10px;
 }
+
 .content__text-block_type_first-lettered
 .content__paragraph:first-child::first-letter {
   background-color: var(--accent-color);
@@ -135,7 +141,7 @@ a{
 .header__menu{
   display: flex;
   justify-content: space-between;
-  border-block: 1px solid #312A4E;
+  border-block: 1px solid;
   padding: 18px;
 }
 .header__theme-toggler{
@@ -155,6 +161,10 @@ a{
 .header__theme-button_is-active{
   font-weight: bold;
 }
+.theme_dark .header__theme-button_is-active::after{
+  content: '';
+  background-image: url("../images/pattern.svg");
+}
   .header__theme-button_is-active::after {
     content: '';
     position: absolute;
@@ -164,5 +174,14 @@ a{
     z-index: -1;
     width: 110%;
     height: 0.3em;
+  }
+  .footer{
+    margin-top: 10%;
+    padding: 2.5%;
+    border-top: 1px solid;
+    text-align: center;
+  }
+  .footer__copyright{
+    font-size: 18px;
   }
 
