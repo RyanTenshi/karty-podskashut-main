@@ -70,6 +70,10 @@ a{
   list-style-type: none;
 }
 
+.theme_dark .content__list-item::before{
+  content: url("/images/marker-dark.svg");
+}
+
 .content__list-item::before{
   content:url("/images/marker-light.svg");
   margin-inline-start: 40px;
@@ -80,7 +84,9 @@ a{
 .content__list-item:not(:last-child){
   margin-bottom: 10px;
 }
-
+.theme_dark .content__paragraph:first-child::first-letter{
+  border: 1px solid;
+}
 .content__text-block_type_first-lettered
 .content__paragraph:first-child::first-letter {
   background-color: var(--accent-color);
