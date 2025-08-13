@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 :root{
-  --bg-color:#312A4E;
+  --bg-color:#171717;
   --text-color:#F3EFEC;
   --accent-color:#FFAB6B;
   --main-font:Raleway;
@@ -12,7 +12,7 @@
 }
 .theme_dark {
   --bg-color: #F3EFEC;
-  --text-color: #312A4E;
+  --text-color: #171717;
   --accent-color: transparent;
 }
 .page {
